@@ -38,8 +38,8 @@ Schema::create('users_version', function(Blueprint $table) {
     $table->primary(['ref_id', 'version']);
     $table->string('email');
     $table->string('city');
-    $table->timestamp('updated_at');
-    $table->timestamp('deleted_at');
+    $table->timestamp('updated_at')->nullable();
+    $table->timestamp('deleted_at')->nullable();
 });
 
 ...
