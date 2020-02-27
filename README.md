@@ -29,8 +29,9 @@ Schema::create('users', function(Blueprint $table) {
 });
 
 Schema::create('users_version', function(Blueprint $table) {
-    $table->integer('ref_id')->primary();
-    $table->integer('version')->primary();
+    $table->integer('ref_id')->index();
+    $table->integer('version')->index();
+    $table->primary(['ref_id', 'version']);
     $table->string('email');
     $table->string('city');
     $table->timestamp('updated_at');
