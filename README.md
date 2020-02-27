@@ -11,6 +11,10 @@ Eloquent Versioning is distributed as a composer package. So you first have to a
 ```
 "proai/eloquent-versioning": "~1.0"
 ```
+And install laravel/helpers (for Laravel 6)
+```
+composer require laravel/helpers
+```
 
 Then you have to run `composer update` to install the package.
 
